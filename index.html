@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adam Travel — سياحة وحج وعمرة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="nav" class="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="brand"><span class="logo-box"><img id="logo" alt="" src="logo.PNG"></span><b id="brandName"></b></a>
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="#home" data-i18n="nHome"></a><a href="#umrah" data-i18n="nUmrah"></a><a href="#tours" data-i18n="nTours"></a>
+      <a href="#services" data-i18n="nServ"></a><a href="#about" data-i18n="nAbout"></a><a href="#contact" data-i18n="nContact"></a>
+    </nav>
+    <div class="nav-act">
+      <a class="btn btn-gold sm" data-wa data-i18n="waBtn" target="_blank" rel="noopener"></a>
+      <button id="langBtn" class="btn btn-line sm" type="button"></button>
+      <button id="burger" class="burger" type="button" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="slides" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <h1 data-i18n="h1"></h1>
+    <p data-i18n="hSub"></p>
+    <div class="row"><a href="#umrah" class="btn btn-gold" data-i18n="hB1"></a><a class="btn btn-line light" data-wa data-i18n="waBtn" target="_blank" rel="noopener"></a></div>
+    <form id="sForm" class="search" aria-label="search">
+      <label><span data-i18n="sType"></span><select id="sType"></select></label>
+      <label><span data-i18n="sDest"></span><select id="sDest"></select></label>
+      <label><span data-i18n="sBud"></span><select id="sBud"></select></label>
+      <button class="btn btn-gold" type="submit" data-i18n="sBtn"></button>
+    </form>
+  </div>
+</section>
+
+<section id="umrah" class="sec">
+  <div class="wrap">
+    <div class="head big"><h2 data-i18n="uTitle"></h2><p data-i18n="uDesc"></p></div>
+    <div class="tools"><div id="chipsH" class="chips" role="group"></div><label class="sort"><span data-i18n="sort"></span><select id="sortH"></select></label></div>
+    <div id="gridH" class="grid"></div><p id="emptyH" class="empty" hidden></p>
+    <p class="note" data-i18n="priceNote"></p>
+  </div>
+</section>
+
+<section id="guide" class="sec alt">
+  <div class="wrap two">
+    <div>
+      <div class="head"><h2 data-i18n="gTitle"></h2></div>
+      <ol id="steps" class="steps"></ol>
+      <p class="note strong" data-i18n="gNote"></p>
+      <!-- لتحديث الخطوات والأسئلة: عدّل DICT.ar.steps / faq و DICT.en.steps / faq في script.js -->
+    </div>
+    <div><div class="head"><h2 data-i18n="fTitle"></h2></div><div id="faq" class="faq"></div></div>
+  </div>
+</section>
+
+<section id="custom" class="sec">
+  <div class="wrap narrow">
+    <div class="head"><h2 data-i18n="cTitle"></h2><p data-i18n="cDesc"></p></div>
+    <form id="fCustom" class="form" novalidate>
+      <label><span data-i18n="fName"></span><input name="name" required autocomplete="name"></label>
+      <label><span data-i18n="fPhone"></span><input name="phone" type="tel" required autocomplete="tel" dir="ltr"></label>
+      <label><span data-i18n="fTrav"></span><input name="trav" type="number" min="1" required></label>
+      <label><span data-i18n="fBud"></span><input name="bud" required></label>
+      <label><span data-i18n="fDate"></span><input name="date" type="date"></label>
+      <label class="full"><span data-i18n="fNotes"></span><textarea name="notes" rows="3"></textarea></label>
+      <div class="full"><button class="btn btn-gold" type="submit" data-i18n="fSend"></button><small data-i18n="fHint"></small></div>
+      <p class="msg full" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section id="tours" class="sec alt">
+  <div class="wrap">
+    <div class="head"><h2 data-i18n="tTitle"></h2><p data-i18n="tDesc"></p></div>
+    <div class="tools"><div id="chipsT" class="chips" role="group"></div><label class="sort"><span data-i18n="sort"></span><select id="sortT"></select></label></div>
+    <div id="gridT" class="grid"></div><p id="emptyT" class="empty" hidden></p>
+  </div>
+</section>
+
+<section id="services" class="sec">
+  <div class="wrap"><div class="head"><h2 data-i18n="sTitle"></h2></div><div id="services4" class="grid svc"></div></div>
+</section>
+
+<section id="about" class="sec alt">
+  <div class="wrap">
+    <div class="head"><h2 data-i18n="wTitle"></h2></div>
+    <div id="why" class="grid why"></div>
+    <div id="stats" class="stats"></div>
+    <p class="note" data-i18n="statNote"></p>
+    <div class="head"><h2 data-i18n="rTitle"></h2><p class="note strong" data-i18n="rNote"></p></div>
+    <!-- آراء تجريبية: استبدلها بآراء حقيقية قبل النشر (DICT.*.reviews) -->
+    <div id="reviews" class="grid rev"></div>
+  </div>
+</section>
+
+<section id="contact" class="sec">
+  <div class="wrap narrow">
+    <div class="head"><h2 data-i18n="kTitle"></h2><p data-i18n="kDesc"></p></div>
+    <form id="fContact" class="form" novalidate>
+      <label><span data-i18n="fName"></span><input name="name" required autocomplete="name"></label>
+      <label><span data-i18n="fPhone"></span><input name="phone" type="tel" required dir="ltr"></label>
+      <label><span data-i18n="fDest"></span><input name="dest" required></label>
+      <label><span data-i18n="fTrav"></span><input name="trav" type="number" min="1" required></label>
+      <label class="full"><span data-i18n="fDate"></span><input name="date" type="date"></label>
+      <label class="full"><span data-i18n="fMore"></span><textarea name="notes" rows="3"></textarea></label>
+      <div class="full"><button class="btn btn-gold" type="submit" data-i18n="fSend"></button><small data-i18n="fHint"></small></div>
+      <p class="msg full" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap fgrid">
+    <div><b id="fName2" class="fb"></b><p data-i18n="fTag"></p><div id="social" class="social"></div></div>
+    <div><h3 data-i18n="fLinks"></h3><ul id="fLinks"></ul></div>
+    <div><h3 data-i18n="nContact"></h3><ul id="fInfo"></ul></div>
+    <div><h3 data-i18n="fMap"></h3><div id="map" class="map"></div></div>
+  </div>
+  <p class="copy">© <span id="year"></span> <span id="fName3"></span></p>
+</footer>
+
+<a id="waFloat" class="wa-float" data-wa target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z"/><path d="M9 8c0 3 3 6 6 6l1-2-2-1-1 1c-1-.4-2-1.400-2.400-2.400l1-1-1-2z"/></svg></a>
+<button id="toTop" class="to-top" type="button" hidden>↑</button>
+
+<div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="m-box">
+    <button id="mClose" class="m-x" type="button">×</button>
+    <div class="gal"><img id="gImg" alt=""><button id="gPrev" class="gb p" type="button">‹</button><button id="gNext" class="gb n" type="button">›</button></div>
+    <div class="m-bd">
+      <h2 id="mTitle"></h2><p id="mMeta" class="pr"></p><p id="mDesc"></p><p id="mHotel" class="loc"></p>
+      <h3 data-i18n="mItin"></h3><div id="mItin" class="faq"></div>
+      <div class="inex"><div><h3 data-i18n="mInc"></h3><ul id="mInc"></ul></div><div><h3 data-i18n="mExc"></h3><ul id="mExc"></ul></div></div>
+      <p class="note strong" data-i18n="mNote"></p>
+      <a id="mWa" class="btn btn-gold" target="_blank" rel="noopener" data-i18n="waBtn"></a>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
